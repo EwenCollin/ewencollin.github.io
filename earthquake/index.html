@@ -1,0 +1,227 @@
+<html>
+
+<head>
+
+  <title>Dévier les séismes</title>
+  <link rel="stylesheet" type="text/css" media="all" href="css/design_css.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="css/parallax.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="css/parallax_scroll.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="css/neon.css" />
+  <meta charset="utf-8" />
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/p5.js"></script>
+	<script async defer src="js/sketch.js"></script>
+</head>
+
+<body>
+
+  <div id="scene" class="scene">
+  <!--
+    <div class="d_parallax2" data-depth="0.80"><img src="images/parallax/auto-truck.png" class="h_parallax2"></div>
+    <div class="d_parallax1" data-depth="1.00"><img src="images/parallax/hydro-bus.png" class="h_parallax1"></div>
+    <div class="d_parallax3" data-depth="0.75"><img src="images/parallax/prt-like.png" class="h_parallax3"></div>
+    <div class="d_parallax4" data-depth="0.40"><img src="images/parallax/tesla.png" class="h_parallax4"></div>
+    -->
+    <div class="d_parallax6" data-depth="0.15">
+      <h2 id="subtitle">Un site réalisé par<br> Marine Pancrazi et Ewen Collin</h2>
+    </div>
+    <div class="d_parallax5" data-depth="0.10">
+      <h1 id="title" style="color:white;text-transform:uppercase;">Dévier les séismes</h1>
+    </div>
+  </div>
+  <!-- Scripts -->
+  <script src="js/parallax.js"></script>
+  <script>
+    // the onReady function is called as soon as Parallax knows what input method to use. This might take up to 1000ms (supportDelay * 2) after initialisation
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
+
+  </script>
+  <div class="bgimg-1">
+    <div class="header_adjust"></div>
+    <div class="caption" id="introduction">
+      <span class="border">Les séismes</span>
+      <p>
+        Parmi les catastrophes naturelles, les séismes font partie des phénomènes les plus présents et meurtriers. On en recense ainsi entre 500 000 et 1 million par an dans le monde, soit au minimum 2 700 par jour.
+      </p>
+      <div id="pbm" class="in-layout">
+        <span id="pbm-title"></span>
+        <span id="problematica">Comment atténuer les séismes ?</span>
+      </div>
+      <div class="sc-article in-layout">
+        <span class="sc-article-title">
+          Experiments on Seismic Metamaterials: Molding Surface Waves
+        </span>
+        <br>
+        <span class="sc-article-authors">
+          S. Brûlé, E. H. Javelaud, S. Enoch, and S. Guenneau
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div id="side-plan">
+    <ul>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#seisme">Les séismes et leurs effets</a></li>
+      <li><a href="#meta">Comment atténuer les séismes ?</a></li>
+      <li><a href="#exp">Expérience</a></li>
+      <li><a href="#resultats">Résultats</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+      <li><a href="#plusloin">Pour aller plus loin</a></li>
+    </ul>
+  </div>
+
+  <div id="seisme"
+    style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+    <h3 style="text-align:center;">Les séismes et leurs effets</h3>
+      <p class="out-shadow" style="background: white;color:black;font-size:20px;">
+        <b>Qu'est-ce qu'un séisme ?</b><br><br>
+        Un séisme est un tremblement du sol provenant du relâchement de très fortes contraintes accumulées en profondeur. Cela a pour effet de provoquer le long d’une faille le mouvement brutal et discontinu de deux plaques.
+        <!--
+        <br>
+        <a class="infolink" target="_blank" href="http://musee-sismologie.unistra.fr/comprendre-les-seismes/notions-pour-petits-et-grands/la-sismicite/sismicite-dans-le-monde/">
+        Principe de la sismicité
+        </a>
+        -->
+        <br><br>
+        Un séisme est un tremblement du sol provenant du relâchement de très fortes contraintes accumulées en profondeur. Cela a pour effet de provoquer le long d’une faille le mouvement brutal et discontinu de deux plaques.
+        <br><br>
+        Environ 90 % des séismes se produisent au niveau des limites des plaques tectoniques, lesquelles constituent la croûte terrestre. On remarque alors une forte disparité dans la localisation de ces phénomènes.
+        <br><br>
+        <img class="intext-img" src="images/seismes_world.jpg"><br>
+        Bien que des séismes aient lieu quotidiennement, la plupart d’entre eux passent pratiquement inaperçus. En effet, le danger réside non pas dans leur nombre mais dans leur intensité : on parle alors de magnitude suivant l’échelle de Richter.
+        <br><br>
+        <b>Magnitude</b><br><br>
+        On utilise une unité logarithmique appelée échelle de Richter pour qualifier l'énergie d'un séisme.
+        Elle permet d’évaluer l'énergie dégagée à l’épicentre des séismes par la valeur de la magnitude.
+        <br><br>
+        Comme nous avons pu le voir, en fonction de leur force, les séismes peuvent entraîner d’importantes conséquences tant sur le plan humain que financier. On peut notamment citer le séisme de Kobé en 1995 qui avait coûté 100 milliards de dollars au Japon.
+        <br><br>
+        <img class="intext-img" src="images/richter.jpg"><br>
+        <br>
+
+    <p>
+      Aujourd'hui, peu de techniques existent pour atténuer les dégâts causés par les séismes. Des chercheurs français expérimentent l'utilisation de métamatériaux, une technique prometteuse présentée ci dessous.
+    </p>
+  </div>
+
+  <div class="bgimg-2">
+  </div>
+
+  <div id="meta" style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+      <p style="text-align:center">Dévier les séismes avec des métamatériaux</p>
+      <div class="intext-div">
+        <b>Simulation de l'expérience</b><br><br>
+        Pendant l’été 2012, Brûlé et al. ont réalisé une expérience grandeur nature ayant pour objectif de montrer les similitudes entre les ondes sismiques et les ondes électromagnétiques et acoustiques. Il leur paraît réaliste de pouvoir influencer des ondes sismiques avec des matériaux anisotropiques artificiels : des <b>métamatériaux sismiques</b>.
+        <br><br>
+        Un matériau anisotropique est un matériau ayant des propriétés différentes selon l’angle avec lequel on le considère. Par exemple : une planche de bois est plus résistante selon si on la prend dans le sens de ses stries ou non.
+        <br><br>
+        Leur but, au cours de l’expérience, est de transformer un sol en le rendant résistant aux séismes avec des motifs réguliers qui permettraient de disperser les ondes sismiques. Ces motifs seraient des colonnes de densité très faible par rapport à celle du sol.
+        <br><br>
+        Néanmoins, le sol étant un milieu de propagation aux propriétés très différentes de celles de l’air, la propagation d’ondes sismiques ne sera pas la même que celles d’ondes acoustiques. Dès lors, ils ont réalisé avant expérience une modélisation du phénomène uniquement à la surface du séisme en mesurant notamment la densité et la rigidité du sol.
+        <br><br>
+        Voici ci-dessous une modélisation simplifiée montrant le principe d’atténuation utilisé dans l’expérience.
+        <br><br>
+        <b>Démo simplifiée</b><br><br>
+        <div id="canvasContainer">
+        </div>
+        <i>Clique sur la démo pour faire apparaître une simulation de séismes</i><br><br><br>
+        
+      </div>
+      <p style="text-align:center" id="exp">Dévier les séismes - l'expérience grandeur nature</p>
+      <div class="intext-div" style="position:relative;padding:0;height:75vh;">
+        <video style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover" src="videos/prlfilm_a.mp4" autoplay loop muted></video>
+        <div style="position:relative;width:40%;height:100%;background:rgba(255,255,255,0.3);color:white;padding:20px;box-sizing:border-box;">
+          <b>L'expérience</b><br><br>
+          Dans leur expérience basée sur cette modélisation, ils ont modifié le sol en y ajoutant des colonnes de densité très inférieure à celle du sol espacées régulièrement, constituant ainsi leur métamatériau. Ils produisent une onde de 50 Hz à l’aide d’une grue et d’une sonde vibrante.
+
+        </div>
+      </div>
+      <div class="intext-img" style="background:white;max-width:60%;">
+        <img src="images/experience_crane.png" style="width:100%"><br>
+        <div style="text-align:center;background:white;box-shadow:none;color:black;padding:10px">
+          Photographie de l'expérience montrant l'agencement des métamatériaux par rapport à l'épicentre
+        </div>
+      </div>
+      <div class="intext-div" style="position:relative;padding:0;height:75vh;">
+        <video style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover" src="videos/prlfilm_b.mp4" autoplay loop muted></video>
+        <div style="position:relative;width:40%;height:100%;background:rgba(255,255,255,0.3);color:white;padding:20px;box-sizing:border-box;">
+          <b>Réalisation de l'expérience</b><br><br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bgimg-3">
+  </div>
+
+  <div style="position:relative;" id="resultats">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+      <p style="text-align:center">Résultats de l'expérience</p>
+      <div class="intext-div" style="background: white;color:black;font-size:20px">
+        <div class="intext-img" style="background:white;max-width:60%;">
+        <img src="images/result.png" style="width:100%"><br>
+        <div style="text-align:center;background:white;box-shadow:none;color:black;padding:10px">
+          Mesures des vélocimètres
+        </div>
+        </div>
+        L’équipe de scientifiques mesure grâce aux vélocimètres (en vert sur l’image ci-dessus) la propagation des ondes sismiques et leur intensité sur la surface du sol. Ils observent un déplacement des ondes sismiques différent en fonction du positionnement des métamatériaux par rapport à l’épicentre.
+        <br><br>
+        En (a), les scientifiques ont tracé la différence de vitesse perçue par les capteurs, cela permet de voir plus précisément la propagation du séisme. La figure (b) montre quant à elle le ratio de la vitesse perçue.
+        <br><br>
+        Ils mesurent de même une longueur d’onde proche de l’espacement des colonnes et confirment leurs résultats mesurés par capteurs : l’onde est déviée avec une fréquence donnée.
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <div class="bgimg-4">
+  </div>
+
+  <div id="conclusion" style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+      <p style="text-align:center">Conclusion</p>
+      <p style="background: white;color:black;font-size:20px;">
+        Comme nous avons pu le voir, une onde sismique dans un modèle simple (2D) peut effectivement être déviée grâce à des métamatériaux adaptés. Cette technique pourrait alors à l’avenir protéger des villes ou des sites particulièrement sensibles tels que les centrales nucléaires. 
+        <br><br>
+        Néanmoins, les séismes mettent généralement en jeu des modèles plus complexes, dans des espaces en 3 dimensions, avec de nombreuses autres variables.
+        <br><br>
+        Ainsi, avant de pouvoir réaliser des structures permettant d’atténuer les tremblements de terre, plus d’analyses sur les ondes sismiques et les métamatériaux à grande échelle seront nécessaires.
+        <br>
+      </p>
+    </div>
+  </div>
+
+  <div class="bgimg-5" style="min-height: 1100px;">
+  </div>
+
+  <div id="plusloin" style="position:relative;text-align: center;">
+    <div id="hydrogene" style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+      <p style="text-align:center">Pour aller plus loin</p>
+      <div class="intext-div" style="background: white;color:black;font-size:20px;">
+        Plusieurs alternatives sont actuellement envisagées afin d’atténuer les ondes sismiques :
+        <br><br>
+        <ul>
+        <li>
+          Les métacylindres avec des trous sur les côtés, qui réduiraient la quantité d'énergie réfléchie par le métamatériau,
+        </li>
+        <li>
+        Le concept de “manteau sismique” pour protéger un bâtiment,
+        </li>
+        <li>
+        Des structures au niveau des fondations des bâtiments empêchant la propagation des ondes à l’intérieur de ces derniers.
+        </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+</body>
+
+</html>
