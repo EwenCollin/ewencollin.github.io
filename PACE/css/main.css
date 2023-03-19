@@ -274,7 +274,7 @@ html {
 
 .text-block::first-letter {
     float: left;
-    font-size: 75px;
+    font-size: 74px;
     line-height: 0.9;
     font-weight: bold;
     margin: 0;
